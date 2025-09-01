@@ -14,6 +14,8 @@ def getDeliveryThreshold(algorithm: str, t: int, d: int):
         return 2*t + 1
     elif algorithm == "opodis_1":
         return 1
+    elif algorithm == "opodis_t+1":
+        return t + 1
     elif algorithm == "opodis_2t+1":
         return 2*t + 1
     
@@ -160,8 +162,9 @@ def copyNetwork(algorithm):
 def addGitKeep():
     code = "find . -type d -empty -exec touch {}/.gitkeep \;"
 
-generate_net("bracha")
+""" generate_net("bracha")
 copyNetwork("opodis_1")
 copyNetwork("opodis_2t+1")
+copyNetwork("opodis_t+1") """
 
 

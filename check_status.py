@@ -35,7 +35,7 @@ while True:
     # clear terminal screen
     text = ""
     
-    for algorithm in ["bracha", "opodis_1", "opodis_2t+1"]:
+    for algorithm in ["bracha", "opodis_1", "opodis_t+1", "opodis_2t+1"]:
         # build progress text
         text += f"{"-"*50} {algorithm:<18} {"-"*50}\n"
         for file in files:

@@ -1,0 +1,7 @@
+In file included from ./quantas/BRBPeer/BRBPeer.hpp:17,
+                 from <command-line>:
+./quantas/BRBPeer/../Common/Simulation.hpp: In member function ‘void quantas::Simulation<type_msg, peer_type>::run(nlohmann::json) [with type_msg = quantas::ExampleMessage; peer_type = quantas::BRBPeer]’:
+./quantas/BRBPeer/../Common/Simulation.hpp:302:29: warning: ignoring return value of ‘FILE* freopen(const char*, const char*, FILE*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  302 |                 std::freopen(file.c_str(), "a+", stdout);
+      |                 ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+slurmstepd-node10: error: *** JOB 57915 ON node10 CANCELLED AT 2025-08-28T10:51:41 ***

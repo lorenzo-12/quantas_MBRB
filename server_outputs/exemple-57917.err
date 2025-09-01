@@ -1,0 +1,11 @@
+In file included from ./quantas/BRBPeer/BRBPeer.hpp:17,
+                 from <command-line>:
+./quantas/BRBPeer/../Common/Simulation.hpp: In member function ‘void quantas::Simulation<type_msg, peer_type>::run(nlohmann::json) [with type_msg = quantas::ExampleMessage; peer_type = quantas::BRBPeer]’:
+./quantas/BRBPeer/../Common/Simulation.hpp:302:29: warning: ignoring return value of ‘FILE* freopen(const char*, const char*, FILE*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  302 |                 std::freopen(file.c_str(), "a+", stdout);
+      |                 ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/bin/ld: quantas/main.o: in function `main':
+main.cpp:(.text.startup+0x50d): undefined reference to `quantas::generateSim()'
+collect2: error: ld returned 1 exit status
+make: *** [/home/difilippo/MessageAdversaryBRB/makefiles/makefile_opodis_t+1_MA3_generalized_wheel_byz_center_n100_k6:75: quantas.exe] Error 1
+slurmstepd-node08: error: *** JOB 57917 ON node08 CANCELLED AT 2025-08-28T10:51:45 ***

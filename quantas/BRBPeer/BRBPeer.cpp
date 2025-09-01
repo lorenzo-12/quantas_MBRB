@@ -121,7 +121,6 @@ namespace quantas {
 
 
 		// opodis
-
 		signatures.assign(n,"_");
         fragments.assign(n,"_");
 		signature_threshold = ceil( (float)(n+t+1)/ (float)2 );
@@ -137,7 +136,7 @@ namespace quantas {
 			if (algorithm == "bracha"){
 				bracha();
 			}
-			else if (algorithm == "opodis_1" || algorithm == "opodis_2t+1" ){
+			else if (algorithm == "opodis_1" || algorithm == "opodis_2t+1" || algorithm == "opodis_t+1"){
 				opodis();
 			}
 			else{
