@@ -144,7 +144,7 @@ def get_data():
         data[label] = {}
         for ma in [1,2,3]:
             data[label][ma] = {}
-            for alg in ["bracha", "opodis_1", "opodis_2t+1"]:
+            for alg in ["bracha", "opodis_1", "opodis_t+1", "opodis_2t+1"]:
                 full_path = pathlib.Path(str(path).replace("<x>", str(ma)).replace("<alg>", alg))
                 data[label][ma][alg] = {}
                 files = list(full_path.glob("*.json"))
@@ -763,7 +763,7 @@ export_legend(legend)
 print(a) """
 
 for ma in [1,2,3]:
-    for alg in ["bracha","opodis_1","opodis_2t+1"]:
+    for alg in ["bracha","opodis_1", "opodis_t+1","opodis_2t+1"]:
         for plot_type in ["del","time","msg"]:
             plot_3D(data,ma,alg,plot_type)
 
